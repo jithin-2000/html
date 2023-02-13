@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice</title>
+	<style>
+		div
+{
+	height:25px;
+	border-radius:25px;
+}
+.container
+{
+	width: 40%;
+	margin:auto;
+	margin-top:200px;
+	border: 3px solid #9985FB;
+	background-color:grey;
+	box-shadow:0px 0px 15px #9985FB;
+}
+.progress
+{
+	width:0px;
+	background-color:#F6C796;
+	animation:progress 10s infinite;
+}
+@keyframes progress
+{
+	0%
+	{
+		width:0%;
+	}
+	100%
+	{
+		width: 100%;
+	}
+
+}
+.progress:hover
+{
+	background-color:darkcyan;
+}
+.container:hover
+{
+	background-color:black;
+	cursor:pointer;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="progress">
+		</div>
+	</div>
+
+</body>
+</html>

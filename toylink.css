@@ -1,0 +1,55 @@
+:root
+{
+	--color-fur:#ffb141;
+	--color-fur-dark:#F5832C;
+	--color-spot:F9584C ;
+	--color-snout:#F44258;
+	--color-collar:#3EAB6C;
+	--duration:.7S;
+	--semi-duration:calc(var(--duration)/2);
+	--easing:cubic-bezier(.5,0,.5,1);
+	--stagger: clac(-1* var(--semi-duration)/2);
+}
+*,*:before,*:after
+{
+	animation-timing-function: var(--easing);
+	! important;
+}
+[class="one"]
+{
+	z-index:1;
+	height: 300px;
+	width:300px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+*
+{
+	position:absolute;
+	will-change:transform;
+
+}
+&:before
+{
+	content: '';
+	position:absolute;
+	bottom:percentage(40px / 300px);
+	left: 0;
+	width:100%;
+	height:percentage(10px/300px);
+	background-color:#D3D1D1;
+	border-radius:2px;
+	animation:shadow
+	  calc(1* var(--semi-duration))
+	  infinite;
+    }@keyframes shadow{
+		from,to{
+			transform:scaleX(.75)
+		}
+		45%,55%
+		{
+			transform:scaleX(.5)
+		}
+	}
+}
